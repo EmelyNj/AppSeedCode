@@ -19,9 +19,11 @@ public partial class User
 
     [DataType(DataType.Password)] //VALIDAR / HACERLA DE TIPO PASSWORD
     [Display(Name = "Contraseña")]
+    [Required(ErrorMessage = "El dato es requerido.")]
     public string Passwordd { get; set; } = null!;
 
-    public int RoleId { get; set; }
+    [Display(Name = "Rol")]
+    public int? RoleId { get; set; }
 
-    public virtual Role Roles { get; set; } = null!;
+    public virtual Role? Roles { get; set; } = null!;
 }
