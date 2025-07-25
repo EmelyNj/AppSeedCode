@@ -1,7 +1,15 @@
+using AppSeedCode.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<PruebaSeedCodeContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Conn"));
+});
 
 var app = builder.Build();
 
