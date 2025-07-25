@@ -21,7 +21,7 @@ namespace AppSeedCode.Controllers
         // GET: Users
         public async Task<IActionResult> Index()
         {
-            var pruebaSeedCodeContext = _context.Users.Include(u => u.Role);
+            var pruebaSeedCodeContext = _context.Users.Include(u => u.Roles);
             return View(await pruebaSeedCodeContext.ToListAsync());
         }
 
@@ -34,7 +34,7 @@ namespace AppSeedCode.Controllers
             }
 
             var user = await _context.Users
-                .Include(u => u.Role)
+                .Include(u => u.Roles)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (user == null)
             {
@@ -130,7 +130,7 @@ namespace AppSeedCode.Controllers
             }
 
             var user = await _context.Users
-                .Include(u => u.Role)
+                .Include(u => u.Roles)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (user == null)
             {

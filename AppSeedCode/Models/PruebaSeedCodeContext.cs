@@ -57,7 +57,7 @@ public partial class PruebaSeedCodeContext : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.RoleId).HasColumnName("role_id");
 
-            entity.HasOne(d => d.Role).WithMany(p => p.Users)
+            entity.HasOne(d => d.Roles).WithMany(p => p.Users)
                 .HasForeignKey(d => d.RoleId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__users__role_id__4D94879B");

@@ -18,10 +18,10 @@ public partial class User
     public string Email { get; set; } = null!;
 
     [DataType(DataType.Password)] //VALIDAR / HACERLA DE TIPO PASSWORD
-    [Display(Name = "Hash de la contraseña")]
+    [Display(Name = "Contraseña")]
     public string Passwordd { get; set; } = null!;
 
     public int RoleId { get; set; }
 
-    public virtual Role Role { get; set; } = null!;
+    public virtual Role Roles { get; set; } = null!;
 }
