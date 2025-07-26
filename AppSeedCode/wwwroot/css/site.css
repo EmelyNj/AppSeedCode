@@ -20,3 +20,34 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+
+/* Para el Login, linea abajo de los input */
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-control-underline {
+    border: none;
+    border-bottom: 2px solid #aaa;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+    .form-control-underline:focus {
+        border-bottom: 2px solid #007bff;
+    }
+
+.form-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+    display: block;
+}
