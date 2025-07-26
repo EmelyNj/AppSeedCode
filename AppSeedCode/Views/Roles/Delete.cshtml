@@ -7,12 +7,15 @@
 <br />
 <br />
 
-<h1>Eliminar</h1>
+<h1 class="text-center"><i class="bi bi-trash3"></i> Eliminar</h1>
 <hr />
 
-<h3>¿Esta seguro de borrar este dato?</h3>
+<h4 class="text-center">¿Esta seguro de borrar este dato?</h4>
+<br />
 
-<div class="card text-md-center col-md-6">
+<div class="container">
+    <div class="row justify-content-center">
+<div class="card border-danger text-md-center col-md-6">
     <div class="card-header">
         Detalles del Rol
     </div>
@@ -20,8 +23,7 @@
 
 
         <div>
-            <h4>Rol</h4>
-            <hr />
+            
             <dl class="row">
                 <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.Name)
@@ -34,9 +36,11 @@
             <form asp-action="Delete">
                 <input type="hidden" asp-for="Id" />
                 <input type="submit" value="Eliminar" class="btn btn-danger" />
-                <a class="btn btn-primary" asp-action="Index"> <i class="bi bi-box-arrow-left"></i> Volver a la Lista</a>
+                <a class="btn btn-secondary" asp-action="Index"> <i class="bi bi-box-arrow-left"></i> Volver a la Lista</a>
             </form>
         </div>
+    </div>
+</div>
     </div>
 </div>
 
