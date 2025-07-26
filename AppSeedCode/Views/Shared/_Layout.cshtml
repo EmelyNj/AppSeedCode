@@ -29,15 +29,28 @@
                                 <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index"><i class="bi bi-house"></i> Inicio</a>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-area="" asp-controller="Roles" asp-action="Index"><i class="bi bi-person-vcard"></i> Roles</a>
-                            </li>
+                            @if (User.Identity.IsAuthenticated)
+                            {
 
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-area="" asp-controller="Users" asp-action="Index"><i class="bi bi-person-circle"></i> Users</a>
-                            </li>
-                            
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" asp-area="" asp-controller="Roles" asp-action="Index"><i class="bi bi-person-vcard"></i> Roles</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" asp-area="" asp-controller="Users" asp-action="Index"><i class="bi bi-person-circle"></i> Users</a>
+                                </li>
+                            }
                         </ul>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            var nombre = User.FindFirst("Name")?.Value;
+                            <a class="nav-link text-light" asp-area="" asp-controller="Users" asp-action="CerrarSession">Cerrar sessión</a>
+                            <span>@nombre</span>
+                        }
+                        else
+                        {
+                            <a class="nav-link text-da" asp-area="" asp-controller="Users" asp-action="Login">Iniciar sesion</a>
+                        }
                     
                     </div>
                 </div>

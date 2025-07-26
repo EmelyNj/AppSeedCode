@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AppSeedCode.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AppSeedCode.Controllers
 {
+    [Authorize]
     public class RolesController : Controller
     {
         private readonly PruebaSeedCodeContext _context;
