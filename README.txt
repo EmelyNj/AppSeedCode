@@ -1,11 +1,11 @@
-#Prueba TÈcnica: GestiÛn de Roles y Usuarios
+#Prueba T√©cnica: Gesti√≥n de Roles y Usuarios
 
-PequeÒa aplicaciÛn ASP.NET Core MVC para gestionar roles y usuarios con Entity Framework Core.
+Peque√±a aplicaci√≥n ASP.NET Core MVC para gestionar roles y usuarios con Entity Framework Core.
 
 ## Requisitos
 
 - .NET 6.0 o superior
-- SQL Server (o la base de datos que estÈs usando)
+- SQL Server (o la base de datos que est√©s usando)
 - Visual Studio
 Paquetes NuGet:
 - Microsoft.EntityFrameworkCore.SqlServer
@@ -13,19 +13,18 @@ Paquetes NuGet:
 
 ---
 
-## InstalaciÛn
+## Instalaci√≥n
 
-1. Clona el repositorio o descarga el cÛdigo.
-2. Abre la soluciÛn en Visual Studio.
-3. Configura tu cadena de conexiÛn en `appsettings.json`:
+1. Clona el repositorio o descarga el c√≥digo.
+2. Abre la soluci√≥n en Visual Studio.
+3. Configura tu cadena de conexi√≥n en `appsettings.json`:
 ```json
 "ConnectionStrings": {
   "Conn": "Server=TU_SERVIDOR;Database=TU_BD;Trusted_Connection=True;"
 }
-4.Ejecuta el proyecto (F5 o botÛn "Run").
+4.Ejecuta el proyecto (F5 o bot√≥n "Run").
 
 ## Notas
--La aplicaciÛn tiene completado el CRUD de Roles.
 -Tener en cuenta: 
-  - El CRUD de Usuarios est· incompleto.
-  - No permite crear un Usuario, parece guardar pero no lo hace, ni en SQL.
+ -El campo contrase√±a se ha quitado de la vista editar, ya que al hacerlo no se guarda o se convierte como una contrase√±a en hash.
+-No se puede eliminar Usuarios, el boton de eliminar manda a la vista crear.
